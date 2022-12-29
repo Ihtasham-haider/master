@@ -1,0 +1,35 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.direction {
+  display: flex;
+  flex-direction: row;
+  color: red;
+  font-size: 18px;
+}
+.direction2 {
+  display: flex;
+  flex-direction: row;
+  color: brown;
+  font-size: 22px;
+}
+#todotitle {
+  padding: 0.5rem;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+button {
+  padding: 0.5rem 1rem;
+  background-color: orangered;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

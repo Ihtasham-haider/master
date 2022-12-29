@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <input type="text" name="" id="todotitle" placeholder="value" />
+
+      <button onclick="addTodo()">click me</button>
+    </div>
+
+    <div id="todolist" class="direction"></div>
+    <div id="todolist2" class="direction2"></div>
+
+    <script>
+      let todos = ['apples', 'mango', 'banana'];
+      let todos2 = [1, 2, 3];
+
+      render();
+
+      function addTodo() {
+        let title = document.getElementById('todotitle').value;
+
+        if (isNaN(title)) {
+          todos.push(title);
+        } else {
+          todos2.push(title);
+        }
+
+        render();
+      }
+
+      function render() {
+        document.getElementById('todolist').innerHTML = ' ';
+        document.getElementById('todolist2').innerHTML = ' ';
+        todos.forEach(function (todo) {
+          let element = document.createElement('div');
+          element.innerHTML = todo;
+          element.style = 'margin-left:12px';
+          let TodoList = document.getElementById('todolist');
+          TodoList.appendChild(element);
+        });
+        todos2.forEach(function (todo) {
+          let element = document.createElement('div');
+          element.innerHTML = todo;
+          element.style = 'margin-left:12px';
+          let TodoList = document.getElementById('todolist2');
+          TodoList.appendChild(element);
+        });
+      }
+    </script>
+  </body>
+</html>
